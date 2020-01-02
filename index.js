@@ -3,21 +3,39 @@ module.exports = {
     es6: true,
     node: true,
   },
+  plugins: ['@typescript-eslint'],
   extends: [
     'airbnb-base',
-    'plugin:node/recommended',
     'plugin:prettier/recommended',
+    'plugin:import/typescript',
   ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
+    sourceType: 'module',
   },
   rules: {
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-unused-vars': 'off',
     'prettier/prettier': [
       'error',
       {
         singleQuote: true,
         trailingComma: 'all',
+      },
+    ],
+    'import/extensions': [
+      'error',
+      {
+        ts: 'never',
+      },
+    ],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
       },
     ],
   },
@@ -26,9 +44,6 @@ module.exports = {
       files: ['*.spec.*', '*.test.*'],
       env: {
         jest: true,
-      },
-      rules: {
-        'node/no-unpublished-require': 'off',
       },
     },
   ],
