@@ -17,7 +17,6 @@ module.exports = {
       'error',
       {
         singleQuote: true,
-        trailingComma: 'all',
       },
     ],
   },
