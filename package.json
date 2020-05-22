@@ -1,0 +1,28 @@
+{
+  "name": "shared-configs",
+  "private": true,
+  "version": "1.1.0",
+  "description": "Monorepo for shared configuration packages",
+  "keywords": [
+    "lerna",
+    "config",
+    "configs",
+    "eslint",
+    "eslintconfig",
+    "prettier"
+  ],
+  "author": "Griffin Yourick <gryphon92@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tough-griff/shared-configs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tough-griff/shared-configs/issues"
+  },
+  "homepage": "https://github.com/tough-griff/shared-configs#readme",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "lerna": "^3.21.0"
+  }
+}
