@@ -4,7 +4,7 @@
   "description": "My personal preferred ESLint configuration",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tough-griff/eslint-config.git"
+    "url": "git+https://github.com/tough-griff/shared-configs.git"
   },
   "keywords": [
     "eslint",
@@ -14,9 +14,9 @@
   "author": "Griffin Yourick <gryphon92@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tough-griff/eslint-config/issues"
+    "url": "https://github.com/tough-griff/shared-configs/issues"
   },
-  "homepage": "https://github.com/tough-griff/eslint-config#readme",
+  "homepage": "https://github.com/tough-griff/shared-configs/tree/master/packages/eslint-config#readme",
   "main": "index.js",
   "files": [
     "index.js"
@@ -32,7 +32,6 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.1.2",
-    "np": "^6.2.0",
     "prettier": "^2.0.4"
   },
   "peerDependencies": {
