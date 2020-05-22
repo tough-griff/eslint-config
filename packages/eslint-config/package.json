@@ -1,6 +1,6 @@
 {
   "name": "@tough-griff/eslint-config",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "My personal preferred ESLint configuration",
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
   "scripts": {
     "test": "eslint *.js"
   },
-  "dependencies": {},
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
