@@ -84,10 +84,11 @@ module.exports = {
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': rules['func-call-spacing'],
 
+    // TODO: this is busted, but it seems like prettier handles it.
     // Replace Airbnb 'indent' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
-    indent: 'off',
-    '@typescript-eslint/indent': rules.indent,
+    // indent: 'off',
+    // '@typescript-eslint/indent': rules.indent,
 
     // Replace Airbnb 'no-array-constructor' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
