@@ -26,6 +26,16 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'lines-between-class-members': [
+      'error',
+      'always',
+      {
+        exceptAfterSingleLine: true,
+      },
+    ],
+
+    'import/prefer-default-export': 'off',
+
     'prettier/prettier': [
       'error',
       {
@@ -50,24 +60,35 @@ module.exports = {
         selector: 'default',
         format: ['camelCase'],
       },
-
       {
         selector: 'variable',
         format: ['camelCase', 'UPPER_CASE'],
+      },
+      {
+        selector: 'variable',
+        types: ['function'],
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: 'method',
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: 'property',
+        types: ['function'],
+        format: ['camelCase', 'PascalCase'],
       },
       {
         selector: 'parameter',
         format: ['camelCase'],
         leadingUnderscore: 'allow',
       },
-
       {
         selector: 'memberLike',
         modifiers: ['private'],
         format: ['camelCase'],
         leadingUnderscore: 'require',
       },
-
       {
         selector: 'typeLike',
         format: ['PascalCase'],
