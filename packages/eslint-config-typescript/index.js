@@ -1,4 +1,6 @@
+// @ts-nocheck
 /* eslint-disable global-require */
+/** @type {import('eslint').Linter.RulesRecord} */
 const rules = {
   ...require('eslint-config-airbnb-base/rules/best-practices').rules,
   ...require('eslint-config-airbnb-base/rules/errors').rules,
@@ -54,46 +56,7 @@ module.exports = {
     // Replace Airbnb 'camelcase' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
     camelcase: 'off',
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        selector: 'default',
-        format: ['camelCase'],
-      },
-      {
-        selector: 'variable',
-        format: ['camelCase', 'UPPER_CASE'],
-      },
-      {
-        selector: 'variable',
-        types: ['function'],
-        format: ['camelCase', 'PascalCase'],
-      },
-      {
-        selector: 'method',
-        format: ['camelCase', 'PascalCase'],
-      },
-      {
-        selector: 'property',
-        types: ['function'],
-        format: ['camelCase', 'PascalCase'],
-      },
-      {
-        selector: 'parameter',
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'memberLike',
-        modifiers: ['private'],
-        format: ['camelCase'],
-        leadingUnderscore: 'require',
-      },
-      {
-        selector: 'typeLike',
-        format: ['PascalCase'],
-      },
-    ],
+    '@typescript-eslint/naming-convention': require('./rules/naming-convention'),
 
     // Replace Airbnb 'comma-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/comma-spacing.md
@@ -215,13 +178,6 @@ module.exports = {
     ],
   },
   overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      rules: {
-        'no-undef': 'off',
-        'import/no-unresolved': 'off',
-      },
-    },
     {
       files: ['*.spec.*', '*.test.*'],
       env: {
