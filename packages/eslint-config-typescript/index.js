@@ -176,6 +176,9 @@ module.exports = {
         ),
       },
     ],
+
+    // Typescript will handle import cycles
+    'import/no-cycle': 'off',
   },
   overrides: [
     {
