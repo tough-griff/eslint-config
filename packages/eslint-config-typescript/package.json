@@ -19,7 +19,8 @@
   "homepage": "https://github.com/tough-griff/shared-configs/tree/master/packages/eslint-config-typescript#readme",
   "main": "index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "rules/"
   ],
   "scripts": {
     "test": "eslint *.js"
