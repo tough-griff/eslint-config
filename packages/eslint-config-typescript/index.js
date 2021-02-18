@@ -212,6 +212,26 @@ module.exports = {
     '@typescript-eslint/space-before-function-paren':
       rules['space-before-function-paren'],
 
+    // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
+    'require-await': 'off',
+    '@typescript-eslint/require-await': rules['require-await'],
+
+    // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
+    'no-return-await': 'off',
+    '@typescript-eslint/return-await': rules['no-return-await'],
+
+    // Replace Airbnb 'space-infix-ops' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/space-infix-ops.md
+    'space-infix-ops': 'off',
+    '@typescript-eslint/space-infix-ops': rules['space-infix-ops'],
+
+    // Replace Airbnb 'object-curly-spacing' rule with '@typescript-eslint' version
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/object-curly-spacing.md
+    'object-curly-spacing': 'off',
+    '@typescript-eslint/object-curly-spacing': rules['object-curly-spacing'],
+
     // Append 'ts' and 'tsx' to Airbnb 'import/extensions' rule
     // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md
     'import/extensions': [

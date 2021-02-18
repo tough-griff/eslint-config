@@ -21,7 +21,6 @@
   "scripts": {
     "test": "lerna run test"
   },
-  "dependencies": {},
   "devDependencies": {
     "lerna": "^3.22.1"
   }
