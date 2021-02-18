@@ -7,6 +7,13 @@ module.exports = [
     ...rules['import/no-extraneous-dependencies'][1],
     devDependencies: rules[
       'import/no-extraneous-dependencies'
-    ][1].devDependencies.map((glob) => glob.replace('js,jsx', 'js,jsx,ts,tsx')),
+    ][1].devDependencies.reduce((result, devDep) => {
+      const toAppend = [devDep];
+      const devDepWithTs = devDep.replace(/\bjs(x?)\b/g, 'ts$1');
+      if (devDepWithTs !== devDep) {
+        toAppend.push(devDepWithTs);
+      }
+      return [...result, ...toAppend];
+    }, []),
   },
 ];
