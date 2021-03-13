@@ -1,7 +1,6 @@
 {
   "name": "shared-configs",
   "private": true,
-  "version": "1.1.0",
   "description": "Monorepo for shared configuration packages",
   "repository": {
     "type": "git",
@@ -22,6 +21,6 @@
     "test": "lerna run test"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^4.0.0"
   }
 }
