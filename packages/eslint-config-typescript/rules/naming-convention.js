@@ -19,8 +19,7 @@ module.exports = [
   },
   {
     selector: 'property',
-    types: ['function'],
-    format: ['camelCase', 'PascalCase'],
+    format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
   },
   {
     selector: 'parameter',
