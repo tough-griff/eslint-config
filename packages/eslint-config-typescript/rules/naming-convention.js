@@ -4,38 +4,29 @@ module.exports = [
     selector: 'default',
     format: ['camelCase'],
   },
+
   {
-    selector: 'variable',
+    selector: 'variableLike',
     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
   },
   {
-    selector: 'variable',
-    types: ['function'],
-    format: ['camelCase', 'PascalCase'],
-  },
-  {
-    selector: 'method',
-    format: ['camelCase', 'PascalCase'],
-  },
-  {
-    selector: 'property',
+    selector: 'variableLike',
+    modifiers: ['unused'],
     format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+    leadingUnderscore: 'require',
   },
+
   {
-    selector: 'parameter',
-    format: ['camelCase'],
-    leadingUnderscore: 'allow',
-  },
-  {
-    selector: 'class',
-    format: ['PascalCase'],
+    selector: 'memberLike',
+    format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
   },
   {
     selector: 'memberLike',
     modifiers: ['private'],
-    format: ['camelCase'],
+    format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
     leadingUnderscore: 'require',
   },
+
   {
     selector: 'typeLike',
     format: ['PascalCase'],
