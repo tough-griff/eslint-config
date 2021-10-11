@@ -28,22 +28,22 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "eslint": "^7.22.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
   },
   "peerDependencies": {
-    "eslint": "^7.22.0",
+    "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1"
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
   },
   "eslintConfig": {
     "extends": "./index.js"
