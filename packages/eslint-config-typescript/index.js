@@ -135,10 +135,9 @@ module.exports = {
     'func-call-spacing': 'off',
     '@typescript-eslint/func-call-spacing': baseStyleRules['func-call-spacing'],
 
-    // Replace Airbnb 'indent' rule with '@typescript-eslint' version
-    // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
+    // Disable 'indent' since prettier will handle this for us
     indent: 'off',
-    '@typescript-eslint/indent': baseStyleRules.indent,
+    '@typescript-eslint/indent': 'off',
 
     // Replace Airbnb 'keyword-spacing' rule with '@typescript-eslint' version
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/keyword-spacing.md
