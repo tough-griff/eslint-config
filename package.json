@@ -43,7 +43,6 @@
     "extends": "./eslint-config"
   },
   "prettier": {
-    "arrowParens": "always",
     "singleQuote": true,
     "trailingComma": "all"
   }

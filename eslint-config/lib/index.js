@@ -23,7 +23,6 @@ const config = {
     'prettier/prettier': [
       'error',
       {
-        arrowParens: 'always',
         singleQuote: true,
         trailingComma: 'all',
       },

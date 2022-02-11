@@ -38,5 +38,9 @@
   },
   "eslintConfig": {
     "extends": "./lib/index.js"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all"
   }
 }
