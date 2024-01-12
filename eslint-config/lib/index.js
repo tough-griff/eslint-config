@@ -1,55 +1,32 @@
 // @ts-check
+'use strict';
 
 /** @type {import('eslint').Linter.Config} */
-const config = {
+module.exports = {
+  root: true,
   env: {
-    es6: true,
     node: true,
   },
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  plugins: ['@stylistic'],
+  extends: ['eslint:recommended', 'plugin:node/recommended'],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 'latest',
   },
-  rules: {
-    'class-methods-use-this': 'off',
-    'lines-between-class-members': [
-      'error',
-      'always',
-      { exceptAfterSingleLine: true },
-    ],
-    'no-param-reassign': ['error', { props: false }],
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    'no-underscore-dangle': 'off',
-    'prettier/prettier': [
-      'error',
-      {
-        singleQuote: true,
-        trailingComma: 'all',
-      },
-    ],
-  },
+  rules: require('./rules/base'),
   overrides: [
     {
-      files: ['*.js', '*.cjs'],
-      extends: ['plugin:node/recommended'],
-      parserOptions: {
-        sourceType: 'script',
-      },
+      files: ['*.ts', '*.cts', '*.mts'],
+      extends: ['plugin:@typescript-eslint/recommended'],
+      rules: require('./rules/typescript'),
     },
     {
-      files: ['*.spec.*', '*.test.*'],
-      env: {
-        jest: true,
-      },
+      files: ['test/**', '*.test.*'],
       rules: {
+        'node/no-extraneous-import': 'off',
+        'node/no-extraneous-require': 'off',
+        'node/no-unpublished-import': 'off',
         'node/no-unpublished-require': 'off',
       },
     },
-    {
-      files: ['*.ts'],
-      extends: [require.resolve('./typescript')],
-    },
   ],
 };
-
-module.exports = config;
