@@ -1,29 +1,36 @@
 {
-  "name": "shared-configs",
-  "private": true,
-  "description": "Monorepo for shared configuration packages",
+  "name": "@tough-griff/eslint-config",
+  "version": "3.0.0",
+  "description": "My personal preferred ESLint configuration",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tough-griff/shared-configs.git"
+    "url": "git+https://github.com/tough-griff/eslint-config.git"
   },
   "keywords": [
     "eslint",
     "eslintconfig",
-    "prettier"
+    "stylistic"
   ],
   "author": "Griffin Yourick <gryphon92@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tough-griff/shared-configs/issues"
+    "url": "https://github.com/tough-griff/eslint-config/issues"
   },
-  "homepage": "https://github.com/tough-griff/shared-configs#readme",
-  "workspaces": [
-    "./eslint-config"
-  ],
+  "homepage": "https://github.com/tough-griff/eslint-config#readme",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npm test --workspaces"
+    "test": "eslint ."
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "@stylistic/eslint-plugin": ">=1",
+    "@typescript-eslint/eslint-plugin": ">=6",
+    "@typescript-eslint/parser": ">=6",
+    "eslint": ">=8"
   },
   "eslintConfig": {
-    "extends": "./eslint-config"
+    "extends": "./lib/index.js"
   }
 }
