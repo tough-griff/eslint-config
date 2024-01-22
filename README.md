@@ -16,15 +16,11 @@ npm install -D @tough-griff/eslint-config
 
 ```sh
 npm install -D @tough-griff/eslint-config \
-  @typescript-eslint/eslint-plugin\
+  @stylistic/eslint-plugin \
+  @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
   eslint \
-  eslint-config-airbnb-base \
-  eslint-config-prettier \
-  eslint-plugin-import \
   eslint-plugin-node \
-  eslint-plugin-prettier \
-  prettier
 ```
 
 or, using [`install-peerdeps`](https://github.com/nathanhleung/install-peerdeps):

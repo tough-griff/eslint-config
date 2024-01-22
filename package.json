@@ -1,49 +1,36 @@
 {
-  "name": "shared-configs",
-  "private": true,
-  "description": "Monorepo for shared configuration packages",
+  "name": "@tough-griff/eslint-config",
+  "version": "3.0.0",
+  "description": "My personal preferred ESLint configuration",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tough-griff/shared-configs.git"
+    "url": "git+https://github.com/tough-griff/eslint-config.git"
   },
   "keywords": [
     "eslint",
     "eslintconfig",
-    "prettier"
+    "stylistic"
   ],
   "author": "Griffin Yourick <gryphon92@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tough-griff/shared-configs/issues"
+    "url": "https://github.com/tough-griff/eslint-config/issues"
   },
-  "homepage": "https://github.com/tough-griff/shared-configs#readme",
-  "workspaces": [
-    "./eslint-config"
-  ],
+  "homepage": "https://github.com/tough-griff/eslint-config#readme",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "npm test --workspaces"
+    "test": "eslint ."
   },
-  "devDependencies": {
-    "@types/eslint": "^8.4.1",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^14.18.11",
-    "@typescript-eslint/eslint-plugin": "^5.11.0",
-    "@typescript-eslint/parser": "^5.11.0",
-    "eslint": "^8.8.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.5.1",
-    "prettier": "^2.5.1",
-    "typescript": "^4.5.5"
+  "engines": {
+    "node": ">=14"
+  },
+  "peerDependencies": {
+    "@stylistic/eslint-plugin": ">=1",
+    "@typescript-eslint/eslint-plugin": ">=6",
+    "@typescript-eslint/parser": ">=6",
+    "eslint": ">=8"
   },
   "eslintConfig": {
-    "extends": "./eslint-config"
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "all"
+    "extends": "./lib/index.js"
   }
 }
