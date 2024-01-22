@@ -19,8 +19,7 @@ npm install -D @tough-griff/eslint-config \
   @stylistic/eslint-plugin \
   @typescript-eslint/eslint-plugin \
   @typescript-eslint/parser \
-  eslint \
-  eslint-plugin-node \
+  eslint
 ```
 
 or, using [`install-peerdeps`](https://github.com/nathanhleung/install-peerdeps):
